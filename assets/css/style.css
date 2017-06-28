@@ -1,14 +1,68 @@
 html{
 
 }
+/*subject section style Begin*/
+#subjectDisplayBorder{
+	width:20%;
+	background-color:purple;
+	float:left;
+}
+.subjectButton{
+	border:none;
+	padding:10px;
+	border-radius:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-color:#818181;
+	transition:.3s;
+}
+.subjectButton:hover{
+	background-color:#5e5b75;
+	color:orange;
+}
+
+
+
+
+/*subject section style End*/
+
+/*GifDisplay section style Begin*/
+#gifMaster{
+	width:80%;
+	height:auto;
+	float:right;
+	background-color:blue;
+
+}
+#gifDisplay{
+	width:80%;
+	height:auto;
+	
+	margin:0 auto 0 auto;
+
+}
+.gifDiv{
+	float:left;
+	background-color:teal;
+	text-align:center;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+/*GifDisplay section style End*/
 footer{
 	background-color:black;
 	width:100%;
-	height:85px;
+	height:45px;
 	position:fixed;
 	bottom:0px;
 
 }
+
+
+
+
 footer p{
 	color:white;
 	font-family:arial;

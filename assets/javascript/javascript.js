@@ -1,6 +1,6 @@
 $(document).ready(function(){
  				
- 				var subject =['ps4', 'xbox', 'gamecube', 'nintendo','sega'];
+ 				var subject =['playstation', 'xbox', 'gamecube', 'nintendo','sega', 'atari'];
 
  				//make buttons
  				function buttonMaker(){
