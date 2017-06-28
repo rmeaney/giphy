@@ -2,12 +2,77 @@
  <html>
  	<head>
  		<style>
-
+		#subjectDisplayBox{
+			background-color:green;
+		}
  		</style>
  	</head>
  	<body>
- 		<script>
+ 	<div id = "subjectDisplayBox"></div>
+ 	<div id = "gifDisplay"></div>
 
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+ 	<script>
+
+ 		$(document).ready(function(){
+ 				$('#subjectDisplayBox').empty();
+ 				var subject =['ps4', 'xbox', 'gamecube', 'nintendo','sega'];
+
+ 				//make buttons
+ 				function buttonMaker(){
+	 					for(i=0; i < subject.length; i++){
+	 						var newBTN = $("<button>").text(subject[i]).attr("data-subject", subject[i]).addClass("subjectButton");
+	 						$('#subjectDisplayBox').append(newBTN);
+	 			
+	 						console.log(subject[i]);
+ 						}
+
+ 				}
+ 				function showGifs(){
+ 						var subject = $(this).attr("data-subject");
+				
+				var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ subject + "&api_key=7b8bc3cad5604c2bb1097f0f4a22365d";
+
+				$.ajax({
+					url: queryURL,
+					method: 'GET',
+
+				}).done(function(response){
+					console.log(response);
+					var results = response.data;
+					$('#gifDisplay').empty();
+					for (i = 0; i < results.length; i++){
+						var subjectDiv = $("<div>").addClass("gifDiv");
+						var rating = $("<p>").html("Rating: " + results[i].rating.toUpperCase());
+						var still = results[i].images.fixed_height_still.url;
+						var animate = results[i].images.fixed_height.url;
+						//
+						var subjectImg = $("<img>").addClass("gif").attr({"src": still, "data-still": still, "data-animate": animate, "data-state": "still"});
+
+						subjectDiv.append(subjectImg).append(rating);
+        			$("#gifDisplay").append(subjectDiv);
+					} 
+				})
+			}
+				function freezeGif(){
+					var state = $(this).attr("data-state");
+					if (state === "still") {
+						$(this).attr("src", $(this).attr("data-animate"));
+						$(this).attr("data-state", "animate");
+					} else {
+						$(this).attr("src", $(this).attr("data-still"));
+						$(this).attr("data-state", "still");
+					}
+				}
+
+       
+
+ 				//var url = "7b8bc3cad5604c2bb1097f0f4a22365d"
+ 				//var queryURL = "http://api.giphy.com/v1/gifs/search?q="+ subject + "&api_key=7b8bc3cad5604c2bb1097f0f4a22365d";
+ 				$(document).on("click", ".subjectButton", showGifs);
+ 				$(document).on("click", ".gif", freezeGif);
+ 				buttonMaker();
+ 		});
  		</script>
  	</body>
  </html>
