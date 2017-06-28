@@ -17,10 +17,26 @@ html{
 	background-color:#818181;
 	transition:.3s;
 }
-.subjectButton:hover{
+.subjectButton:hover, .subjectButton:focus{
 	background-color:#5e5b75;
 	color:orange;
 }
+label{
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+#searchSubject{
+	margin-bottom:10px;
+	border-radius:5px;
+
+}
+#addSubject{
+	margin-bottom:10px;
+
+}
+
 
 
 
