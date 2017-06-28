@@ -38,7 +38,7 @@
  				function showGifs(){
  						var subject = $(this).attr("data-subject");
 				
-				var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ subject + "&api_key=7b8bc3cad5604c2bb1097f0f4a22365d";
+				var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ subject + "&rating=pg&api_key=7b8bc3cad5604c2bb1097f0f4a22365d";
 
 				$.ajax({
 					url: queryURL,
