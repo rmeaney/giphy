@@ -9,17 +9,24 @@
  	</head>
  	<body>
  	<div id = "subjectDisplayBox"></div>
+ 	<form>
+		<label>Search for more Content</label>
+		<input class="form-control" id="searchSubject" type="text">
+		<input id="addSubject" type="submit" value="Submit">
+ 	</form>
  	<div id = "gifDisplay"></div>
+ 	
 
  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
  	<script>
 
  		$(document).ready(function(){
- 				$('#subjectDisplayBox').empty();
+ 				
  				var subject =['ps4', 'xbox', 'gamecube', 'nintendo','sega'];
 
  				//make buttons
  				function buttonMaker(){
+ 					$('#subjectDisplayBox').empty();
 	 					for(i=0; i < subject.length; i++){
 	 						var newBTN = $("<button>").text(subject[i]).attr("data-subject", subject[i]).addClass("subjectButton");
 	 						$('#subjectDisplayBox').append(newBTN);
@@ -72,6 +79,20 @@
  				$(document).on("click", ".subjectButton", showGifs);
  				$(document).on("click", ".gif", freezeGif);
  				buttonMaker();
+
+ 				// now we will add the search for subject code
+ 				$('#addSubject').on('click', function(event){
+ 					event.preventDefault();
+ 					var newSubject = $("#searchSubject").val().trim();
+ 					if (newSubject != "" && subject.indexOf(newSubject.toLowerCase()) === -1) {
+						$("#searchSubject").val("");
+						subject.push(newSubject);
+						buttonMaker();
+					} else {
+						alert("Enter a new search term!");
+					}
+
+ 				});
  		});
  		</script>
  	</body>
