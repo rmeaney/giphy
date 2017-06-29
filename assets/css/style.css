@@ -114,14 +114,23 @@ label{
 }
 .gifDiv{
 	float:left;
-	background-color:teal;
+	
 	text-align:center;
 	margin-right:10px;
 	margin-bottom:10px;
 	cursor:pointer;
 }
 img{
-	background-color:rgba(186,157,125,1.0);
+	/*background-color:rgba(186,157,125,1.0);*/
+}
+.gifDiv p{
+	background-color:#E38549;
+	color:white;
+	border-radius:4px;
+	margin-top:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+
 }
 
 /*GifDisplay section style End*/
