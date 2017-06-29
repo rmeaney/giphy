@@ -26,7 +26,8 @@ html{
 	border:1px groove #3E3D4A;
 }
 .subjectButton:hover, .subjectButton:focus{
-	background-color:#3E3D4A;
+	
+	background-color:rgba(62,61,74,1.0);
 	color:orange;
 
 	
