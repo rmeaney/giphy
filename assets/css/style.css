@@ -1,5 +1,12 @@
 html{
 	background-image:url('../images/space.jpg');
+	background-size: 100% 100%;
+	 background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .5;
+}
+body{
+
 }
 /*subject section style Begin*/
 header{
@@ -75,16 +82,30 @@ label{
 	margin-left:15px;
 	opacity:1;
 }
+
 #searchSubject{
 	margin-bottom:10px;
 	border-radius:5px;
 	color:rgba(0,0,0,1);
 
 }
+
 #addSubject{
 	margin-bottom:10px;
 	margin-left:10px;
 	opacity:1;
+	background-color:#E38549;
+	color:white;
+	border:none;
+	padding:6px;
+	border-radius:5px;
+	font-family:'Space Mono', monospace;
+	font-weight:bold;
+}
+#addSubject:hover{
+	background-color:rgba(62,61,74,1.0);
+	color:rgba(227,133,73,1);
+	cursor:pointer;
 
 }
 
@@ -96,13 +117,15 @@ label{
 
 /*GifDisplay section style Begin*/
 #gifMaster{
-	width:80%;
+	width:75%;
 	height:auto;
 	float:right;
 	margin-top:10px;
 	/*background-color:#4A77B0;*/
 	background-color:rgba(74,119,176,0.7);
 	border-radius:10px;
+	margin-right:10px;
+	border:3px groove #4A77B0;
 
 }
 #gifDisplay{
@@ -114,7 +137,6 @@ label{
 }
 .gifDiv{
 	float:left;
-	
 	text-align:center;
 	margin-right:10px;
 	margin-bottom:10px;
