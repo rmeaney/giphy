@@ -8,7 +8,7 @@ html{
 }
 #subjectDisplayBox{
 	background-color:#4A77B0;
-	opacity:.7;
+	
 	background-color:rgba(74,119,176,0.7);
 	border-radius:10px;
 }
@@ -23,14 +23,23 @@ html{
 	
 	transition:.3s;
 	background-color:rgba(227,133,73,1.0);
+	color:rgba(255,255,255,1);
 	border:1px groove #3E3D4A;
 }
 .subjectButton:hover, .subjectButton:focus{
 	
 	background-color:rgba(62,61,74,1.0);
-	color:orange;
+	color:rgba(227,133,73,1);
 
 	
+}
+#searchSubject{
+	margin-top:10px;
+	margin-left:10px;
+}
+#searchSubject:focus{
+	background-color:#E38549;
+	color:white;
 }
 
 form{
@@ -39,7 +48,7 @@ form{
 	margin-top:20px;
 	padding-top:15px;
 	padding-bottom:15px;
-	opacity.7;
+	background-color:rgba(74,119,176,0.7);
 	
 }
 label{
@@ -53,7 +62,7 @@ label{
 #searchSubject{
 	margin-bottom:10px;
 	border-radius:5px;
-	opacity:1;
+	color:rgba(0,0,0,1);
 
 }
 #addSubject{
