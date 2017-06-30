@@ -180,4 +180,41 @@ footer p a{
 }
 footer p a:hover{
 	color:#5649E3;
+
 }
+
+
+/* media Queries for mobile Begin */
+	@media only screen and (max-width: 600px) {
+		header{
+
+		}
+		#subjectDisplayBorder{
+			float:none;
+			width:100%;
+		}
+		#subjectDisplayBox{
+			border-radius:0px;
+			padding:0px;
+			margin:0px;
+	}
+	#gifMaster{
+		float:none;
+		margin:10px auto 0 auto;
+		width:80%;
+		height:auto;
+	}
+	#gifDisplay{
+	
+
+}
+	.gifDiv{
+	margin:0 auto 0 auto;
+	
+	}
+
+
+
+/* media Queries for mobile End */
+
+
