@@ -197,22 +197,26 @@ footer p a:hover{
 			border-radius:0px;
 			padding:0px;
 			margin:0px;
-	}
-	#gifMaster{
-		float:none;
-		margin:10px auto 0 auto;
-		width:80%;
-		height:auto;
-	}
-	#gifDisplay{
-	width:100%;
+		}
+		#gifMaster{
+			float:none;
+			margin:10px auto 0 auto;
+			width:100%;
+			height:auto;
+		}
+		#gifDisplay{
+		width:100%;
+		margin:10px 0px 0px 0px;
 
-}
-	.gifDiv{
-	margin:0 auto 0 auto;
-	float:left;
+		}
+		.gifDiv{
+		margin:0 auto 0 auto;
+	
 
-	}
+		}
+		img{
+			padding-top: 10px;
+		}
 
 
 
