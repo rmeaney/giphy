@@ -205,12 +205,13 @@ footer p a:hover{
 		height:auto;
 	}
 	#gifDisplay{
-	
+	width:100%;
 
 }
 	.gifDiv{
 	margin:0 auto 0 auto;
-	
+	float:left;
+
 	}
 
 
